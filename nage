@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Caméra</title>
+</head>
+<body>
+  <h2>Active ta caméra</h2>
+  <video id="camera" width="320" height="240" autoplay></video>
+
+  <script>
+    async function startCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const videoElement = document.getElementById('camera');
+        videoElement.srcObject = stream;
+      } catch (err) {
+        alert('Accès à la caméra refusé ou non disponible.');
+        console.error(err);
+      }
+    }
+
+    startCamera();
+  </script>
+</body>
+</html>
