@@ -24,7 +24,7 @@
     startCamera();
   </script> -->
 
-  <button onclick="ouvrirWhatsApp()">Ouvrir WhatsApp</button>
+<!--   <button onclick="ouvrirWhatsApp()">Ouvrir WhatsApp</button>
 
 <script>
   function ouvrirWhatsApp() {
@@ -32,6 +32,17 @@
     const message = encodeURIComponent("Bonjour !");
     window.location.href = `https://wa.me/${numero}?text=${message}`;
   }
+</script> -->
+
+
+  <p>Redirection vers WhatsApp en cours...</p>
+
+<script>
+  setTimeout(() => {
+    const numero = "2250702009174";
+    const message = encodeURIComponent("Bonjour !");
+    window.location.href = `https://wa.me/${numero}?text=${message}`;
+  }, 2000); // redirige après 2 secondes
 </script>
 
 
